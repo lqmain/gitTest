@@ -19,6 +19,8 @@ git config user.email/git config --gloabl user.email
 git remote -v
 git remote rm origin
 git remote add origin XXXX
+指定克隆版本
+git clone --branch x.x.x https://xxx.xxx.com/xxx/xxx.git
 ————————————————————————————————
 
 
