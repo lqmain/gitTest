@@ -1,0 +1,2 @@
+成功后删除了master上的添加文件并提交master，但检出branch后文件回归
+接下来实验合并master前增加文件
