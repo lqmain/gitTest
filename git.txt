@@ -19,6 +19,8 @@ git config user.email/git config --gloabl user.email
 git remote -v
 git remote rm origin
 git remote add origin XXXX
+撤销合并
+git reset --hard HEAD~
 ————————————————————————————————
 
 
