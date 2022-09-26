@@ -54,7 +54,7 @@ git status 			# 查看当前仓库的状态
 git diff 			# 查看修改
 git log 			# 查看提交历史
 git revert 			# 回退某个修改
-git remote			#远程
+git remote			# 远程
 
 ————————————————————————————————
 
@@ -76,8 +76,9 @@ git remote			#远程
 
 git add -A 保存所有的修改
 git add . 保存新的添加和修改，但是不包括删除
-git add -u 保存修改和删除，但是不包括新建文件。
-所以默认使用git add -A就行
+git add -u 保存修改和删除，但是不包括新建文件。所以默认使用git add -A就行
+git rm 文件 从缓存区去除
+	# 添加所有后选择性的删除内容
 
 ————————————————————————————————
 
