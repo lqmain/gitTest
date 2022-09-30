@@ -197,9 +197,25 @@ git remote add 远端仓库名(origin) 链接
 ————————————————————————————————————————————————————————————————
 
 git stash
-			# 将当前改动暂存
+			# 会把所有未提交的修改（包括暂存的和非暂存的）都保存起来
+git stash save "message"
+			# 保存并设置识别信息，识别信息并非stash的名字，名字是stash@{id}
+git stash list
+			# 查看现有stash
 git stash pop
-			# 将先前暂存的改动弹出
+			# 将缓存堆栈中的第一个stash删除，并将对应修改应用到当前的工作目录下。
+git stash apply stash@{id}
+			# 通过名字指定使用哪个stash，默认使用最近的stash（即stash@{0}）
+git stash drop stash@{id}
+			# 通过索引删除暂存的改动
+git stash show
+			# 查看修改(diff)
+git stash show stash@{id}
+			# 查看指定stash的修改(diff)
+git stash clear
+			# 删除所有
+git stash branch 分支名
+			# 以暂存内容为基础创建分支
 
 ————————————————————————————————————————————————————————————————
 
@@ -319,11 +335,14 @@ git log --graph --all --oneline
 						origin 远程分支
 ————————————————————————————————————————————————————————————————
 
-远程先开好分支然后拉到本地
-git checkout -b feature-branch origin/feature-branch    //检出远程的feature-branch分支到本地
-本地先开好分支然后推送到远程
-$  git checkout -b feature-branch    //创建并切换到分支feature-branch  
-$  git push origin feature-branch:feature-branch    //推送本地的feature-branch(冒号前面的)分支到远程origin的feature-branch(冒号后面的)分支(没有会自动创建)
+git checkout -b feature-branch origin/feature-branch
+			# 远程先开好分支然后拉到本地
+			检出远程的feature-branch分支到本地
+git checkout -b feature-branch
+			# 本地先开好分支然后推送到远程
+			创建并切换到分支feature-branch  
+git push origin feature-branch:feature-branch
+			# 推送本地的feature-branch(冒号前面的)分支到远程origin的feature-branch(冒号后面的)分支(没有会自动创建)
 
 ————————————————————————————————————————————————————————————————
 
